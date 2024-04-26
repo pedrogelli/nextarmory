@@ -1,0 +1,30 @@
+https://excaliburjs.com/docs/engine
+https://labs.phaser.io/index.html?dir=scenes/&q=
+https://www.youtube.com/watch?v=sNk9dkaOkJs
+
+
+Analise do game real
+ao fazer 3 pontos aparece informações {
+    Detalhes do modulo OFFLINE
+    Custo para consertar: 1x Heat
+}
+Consertou {
+    Habilita para ver os botões
+    Vê Item Cap, Prodution Time, Prodution Volume
+    Habilita Speed 5S - Next level 4.6s - Cost 1 Heat
+    
+}
+Com 9 pontos habilita Menu principal {
+    Craft
+    Research {
+        Main - Next: Capacidade - Cost: 5 Heat
+        Habilita Settings
+    }
+}
+Com 14 pontos habilita Log {
+
+}
+
+Comprou Heat Storage {
+    Habilita Tank
+}
