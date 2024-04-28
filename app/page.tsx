@@ -5,7 +5,7 @@ import './main.css';
 export default function Home() {
   
   return (
-    <main className="container flex items-center justify-center h-screen bg-black text-white">
+    <main className="flex items-center justify-center h-screen bg-black text-white">
          <div id="menuJogo" className="animate-pulse flex flex-col space-y-6 items-center justify-center text-center w-1/2 h-1/2 p-6 rounded-lg">
           <span id="bolinha" className="relative flex h-4 w-4">
             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
