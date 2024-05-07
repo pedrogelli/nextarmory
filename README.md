@@ -16,7 +16,7 @@ Sei que o React não é uma plataforma pensada na criação de jogo e nem estou 
 Comecei a explorar as ferramentas usando o repositório de exemplo do Next.js com TailwindCSS.
 >npx create-next-app --tailwind with-tailwindcss-app
 
-Estou subindo no Github porque estou seguindo o tutorial do Next.js onde é construido um dashboard para invoices. O tutorial utiliza a Vercel para fazer hospedar gratuitamente um projeto, utiliza o PostgreeSQL.
+Estou subindo no Github porque estou seguindo o tutorial do Next.js onde é construido um dashboard para invoices. O tutorial utiliza a Vercel para fazer hospedar gratuitamente um projeto, utiliza o PostgresSQL.
 
 Next.js Tutorial: https://nextjs.org/learn/dashboard-app
 
