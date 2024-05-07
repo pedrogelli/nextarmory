@@ -4,6 +4,7 @@ import Infos from './infos';
 import Botao from './botao';
 import BotaoHabilidade from './botaoHabilidade';
 import { ChevronDownIcon, ChevronUpIcon } from '@heroicons/react/24/outline';
+import styles from '@/app/game/barra.module.css'
 
 export let productionTimeLabel = 5;
 
@@ -47,8 +48,8 @@ export default function Barra(props: any) {
       // Aumentar Velocidade do Aquecer
     const velocidade = () => {
       if(custoVelocidade <= pontos){
-        setProductionTime(productionTime - 3);
-        setProductionTimeLabel((productionTime - 3) / 10);
+        setProductionTime(productionTime - 4);
+        setProductionTimeLabel((productionTime - 4) / 10);
         setPontos(pontos - custoVelocidade);
         setCustoVelocidade(custoVelocidade + 3);
         setLevelVelocidade(levelVelocidade + 1);
@@ -111,13 +112,13 @@ export default function Barra(props: any) {
 
 
     return (
-      <div className='container my-6'>
-        <div className="columns-1 bg-slate-100 ">
+      <div className='container my-6 border border-slate-400'>
+        <div className="columns-1 ">
 
           <div id="mainWrapper" className='flex m-3'>
 
             <div id="mainButton" className=''>
-              <Botao isDisabled={isDisabled} func={handleButtonClick} nome={props.tipo} />
+              <Botao isDisabled={isDisabled} func={handleButtonClick} nome={props.nome} />
             </div>
 
             <div id="barras" className='w-full pl-2'>
@@ -143,21 +144,23 @@ export default function Barra(props: any) {
 
           </div> {/* fim do mainWrapper*/}
 
-          <div id="barraDetalhes" className='flex px-2 columns-3 bg-white border-2 border-slate-400'>
+          <div id="barraDetalhes" className='flex p-2 columns-3 bg-white border-y border-slate-400'>
             
-            <div id="sinalHabilidade" className='w-1/3 text-left'>
+            <div id="sinalHabilidade" className='flex items-center w-1/3 text-left'>
               <div className='h-2 w-5 mx-0.5 border border-slate-400 inline-block'></div>
               <div className='h-2 w-5 mx-0.5 border border-slate-400 inline-block'></div>
               <div className='h-2 w-5 mx-0.5 bg-slate-900 border border-slate-400 inline-block'></div>
             </div>
             
-            <div id="labelDetalhes" className='w-1/3 text-center'>
-              <ChevronUpIcon className="h-4 w-6 inline "/>
+            <div id="labelDetalhes" className='flex w-1/3 text-center items-center justify-center'>
+              {/* <ChevronUpIcon className="h-4 w-6 inline"/> */}
+              <div className={`${styles.shape} inline`}/>
               <p className='inline mx-2 text-xs'>DETALHES</p>
-              <ChevronUpIcon className="h-4 w-6 inline"/>
+              <div className={styles.shape}/>
+              {/* <ChevronUpIcon className="h-4 w-6 inline"/> */}
             </div>
 
-            <div className='w-1/3 text-right'>
+            <div className='flex items-center justify-end w-1/3 text-right'>
               <div className='h-2 w-5 bg-slate-900 border border-slate-400 inline-block'></div>
             </div>
 
@@ -175,7 +178,7 @@ export default function Barra(props: any) {
             alias={"Aquecer"}
             custo={custoVelocidade}
             level={levelVelocidade}
-            nextLevel={productionTimeLabel - 0.3}
+            nextLevel={productionTimeLabel - 0.4}
             isDisabled={isDisabledVelocidade}
            />
            <BotaoHabilidade

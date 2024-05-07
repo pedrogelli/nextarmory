@@ -1,4 +1,4 @@
-import Menu from "../game/menu";
+import Menu from "../game/footer";
 import ItemPesquisa from "./itemPesquisa";
 
 export default function Pesquisa(){

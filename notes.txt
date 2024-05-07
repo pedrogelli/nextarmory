@@ -28,3 +28,46 @@ Com 14 pontos habilita Log {
 Comprou Heat Storage {
     Habilita Tank
 }
+
+
+
+
+
+bar_id		user_id			nome				nivel
+
+HeatBar		pedro_id		pedro 				1
+
+TankBar		pedro_id		pedro 				2
+
+========================================
+
+HeatBar		anotheruser_id	AnotherUser 		1
+
+
+COLUMN barra_progresso
+id
+id_usuario
+nivel
+velocidade
+capacidade
+volume_producao
+bots
+
+COLUMN usuarios
+id
+name
+email
+password
+
+// inserindo dado
+INSERT INTO barra_progresso (id, id_usuario, nivel, velocidade, capacidade, volume_producao, bots)
+VALUES ('Heat', '11c15a6d-556b-4e48-ba51-bad514eb9bf8', 1, 50, 15, 1, 0);
+
+// Atualizando coluna ID de pedro
+UPDATE usuarios
+SET ID = '11c15a6d-556b-4e48-ba51-bad514eb9bf8'
+WHERE name = 'pedro';
+
+
+POSTAR STACKOVERFLOW = Redit
+Tips database. Onde e como seria a melhor forma de organizar e guardar esses dados.
